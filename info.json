@@ -1,0 +1,7 @@
+"info" : {
+"name":"<project name",
+"repository":"<link to the project's code>",
+"tags":["any ammount of tags that seem necessary","builders","meta"],
+"sdlc":["sdlc steps it fits into or empty array for n/a"],
+"example_usage":"either link to demo site or a one liner to run the project with"
+}
