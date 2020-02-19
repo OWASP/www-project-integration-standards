@@ -58,9 +58,9 @@ def gather_metadata(reponame: str, orgname: str) -> list:
     connection = GitHub()
     query = "filename:info.json path:/"
     if reponame is not None:
-        search = "repo:%s %s"%(reponame,query)
+        search = f"repo:{reponame} {query}"
     elif orgname is not None:
-        search = "org:%s %s"%(orgname,query)
+        search = f"org:{orgname} {query}"
 
     metadata = connection.search_code(search)
 
@@ -70,19 +70,19 @@ def gather_metadata(reponame: str, orgname: str) -> list:
         if content.status_code == 200:
             resp = json.loads(content.text)
             
-            print("analysing data for %s"%resp['_links']['html'])
+            print(f"analysing data for {resp['_links']['html']}")
             raw = base64.b64decode(resp['content']).decode('utf-8').replace("\n","")
             try:
                 metadata = json.loads(raw)
-            except Exception as e:
-                print("Could not read metadta from repo %s, skipping"%f.url)
+            except Exception:
+                print(f"Could not read metadata from repo {f.url}, skipping")
                 continue
 
             result.append(metadata)
             print("Success")
             
         else:
-            print("ERROR response code: %s"%content.status_code)
+            print(f"ERROR response code: {content.status_code}")
 
     return result
 
@@ -90,11 +90,11 @@ def build_metadata(org_dict: dict, repo_dict: dict) -> list:
     mindmap = {"Planning":[],"Analysis":[],"Design":[],"Implementation":[],"Maintenance":[],"Strategy":[],"Culture":[]}
 
     for human_org_name,github_org_name in org_dict.items():
-        print("Processing %s"%human_org_name)
+        print(f"Processing {human_org_name}")
         mindmap = enhance_metadata(reponame=None, orgname=github_org_name,metadata=mindmap)
 
     for human_repo_name,github_repo_name in repo_dict.items():
-        print("Processing %s"%human_repo_name)
+        print(f"Processing {human_repo_name}")
         mindmap = enhance_metadata(orgname=None,  reponame=github_repo_name,metadata=mindmap)
     return mindmap
 
