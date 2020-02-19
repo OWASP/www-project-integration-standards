@@ -16,7 +16,7 @@ from itertools import chain
 
 
 class Info:
-    def __init__(self, info_json:{}):
+    def __init__(self, info_json: dict):
         values = info_json.get('info',info_json)
         self.name = values['name']
         self.repository = values['repository']
@@ -33,7 +33,7 @@ def add(graph, root, child):
     edge = pydot.Edge(root,child)
     graph.add_edge(edge)
 
-def enhance_metadata(reponame:str, orgname:str,metadata:{}) ->{}:
+def enhance_metadata(reponame: str, orgname: str,metadata: dict) -> dict:
     """ searches for info.json in the repo or the org defined
         finds the info.json metadata files and fetches them
         returns object representation of metadata files groupped by sdlc step
@@ -48,7 +48,7 @@ def enhance_metadata(reponame:str, orgname:str,metadata:{}) ->{}:
                 metadata[step].append(Info(dat))
     return metadata
 
-def gather_metadata(reponame:str, orgname:str) ->[]:
+def gather_metadata(reponame: str, orgname: str) -> list:
     """Builds the repo object for every repo in the org
     :param reponame if not None, it will search only for the specific repo
     :param orgname if not None, it will search only for the specific org
@@ -86,7 +86,7 @@ def gather_metadata(reponame:str, orgname:str) ->[]:
 
     return result
 
-def build_metadata(org_dict:{}, repo_dict:{})->{}:
+def build_metadata(org_dict: dict, repo_dict: dict) -> list:
     mindmap = {"Planning":[],"Analysis":[],"Design":[],"Implementation":[],"Maintenance":[],"Strategy":[],"Culture":[]}
 
     for human_org_name,github_org_name in org_dict.items():
@@ -98,7 +98,7 @@ def build_metadata(org_dict:{}, repo_dict:{})->{}:
         mindmap = enhance_metadata(orgname=None,  reponame=github_repo_name,metadata=mindmap)
     return mindmap
 
-def build_graph(metadata:{})->pydot.Dot:
+def build_graph(metadata: dict)->pydot.Dot:
     graph = pydot.Dot(graph_type="graph", rankdir="UD")
     for sdlc_step,projects in metadata.items():
         add(graph,"sdlc",sdlc_step)
