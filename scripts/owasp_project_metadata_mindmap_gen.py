@@ -33,21 +33,6 @@ def add(graph, root, child):
     edge = pydot.Edge(root,child)
     graph.add_edge(edge)
 
-def enhance_metadata(reponame: str, orgname: str,metadata: dict) -> dict:
-    """ searches for info.json in the repo or the org defined
-        finds the info.json metadata files and fetches them
-        returns object representation of metadata files groupped by sdlc step
-    """
-    data = gather_metadata(reponame=reponame,orgname=orgname)
-    for dat in data:
-        info =  dat.get('info', None)
-        if info:
-            for step in info.get('sdlc',None):
-                if step not in metadata:
-                    metadata[step] = list()
-                metadata[step].append(Info(dat))
-    return metadata
-
 def gather_metadata(reponame: str, orgname: str) -> list:
     """Builds the repo object for every repo in the org
     :param reponame if not None, it will search only for the specific repo
@@ -85,6 +70,21 @@ def gather_metadata(reponame: str, orgname: str) -> list:
             print(f"ERROR response code: {content.status_code}")
 
     return result
+
+def enhance_metadata(reponame: str, orgname: str,metadata: dict) -> dict:
+    """ searches for info.json in the repo or the org defined
+        finds the info.json metadata files and fetches them
+        returns object representation of metadata files groupped by sdlc step
+    """
+    data = gather_metadata(reponame=reponame,orgname=orgname)
+    for dat in data:
+        info =  dat.get('info', None)
+        if info:
+            for step in info.get('sdlc',None):
+                if step not in metadata:
+                    metadata[step] = list()
+                metadata[step].append(Info(dat))
+    return metadata
 
 def build_metadata(org_dict: dict, repo_dict: dict) -> list:
     mindmap = {"Planning":[],"Analysis":[],"Design":[],"Implementation":[],"Maintenance":[],"Strategy":[],"Culture":[]}
