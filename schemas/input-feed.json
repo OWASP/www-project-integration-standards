@@ -1,0 +1,46 @@
+[
+  {
+    "CRE_ID": "<ID in here>",
+    "links": {
+      "requirements": {
+        "ASVS": [
+          {
+            "ID": "<ASVS_ID>",
+            "URI": "<URI for that ID -- OPTIONAL>"
+          },
+          {
+            "ID": "<ASVS_ID>",
+            "URI": "<URI for that ID -- OPTIONAL>"
+          }
+        ],
+        "MASVS": []
+      },
+      "tests": {
+        "WSTG": [],
+        "MSTG": []
+      }
+    }
+  },
+  {
+    "CRE_ID": "<ID in here>",
+    "links": {
+      "requirements": {
+        "ASVS": [
+          {
+            "ID": "<ASVS_ID>",
+            "URI": "<URI for that ID -- OPTIONAL>"
+          },
+          {
+            "ID": "<ASVS_ID>",
+            "URI": "<URI for that ID -- OPTIONAL>"
+          }
+        ],
+        "MASVS": []
+      },
+      "tests": {
+        "WSTG": [],
+        "MSTG": []
+      }
+    }
+  }
+]
