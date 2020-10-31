@@ -39,7 +39,7 @@ from github import Github
 
 # todo: generate schema from existing yaml, validate against schema  -- done
 # commit, -- done
-# issue pull request 
+# issue pull request  -- done
 # migrate gspread to work as a bot as well as oauth
 # sync to spreadsheet (different script runs from master)
 # make github action    https://www.jeffgeerling.com/blog/2020/running-github-actions-workflow-on-schedule-and-other-events
