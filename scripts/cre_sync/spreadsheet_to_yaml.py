@@ -127,6 +127,7 @@ def add_to_github(cre_loc:str, alias:str,apikey):
 
     logger.info("Adding cre files to branch %s"% branch_name)
     current_branch = repo.active_branch.name
+
     try:
         g.checkout(branch_name)
         g.add(cre_loc)
