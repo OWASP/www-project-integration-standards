@@ -2,8 +2,3 @@
 /Gemfile.lock
 /favicon.ico
 _site/
-
-
-### vscode ###
-.vscode/*
-*.code-workspace
