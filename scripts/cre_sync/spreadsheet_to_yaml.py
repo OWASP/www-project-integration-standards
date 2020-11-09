@@ -166,10 +166,11 @@ def main():
         create_branch(commit_msg_base)
         urls = yaml.safe_load(sfile)
         for spreadsheet_url in urls:
+            logger.info("Dealing with spreadsheet %s"%spreadsheet_url['alias'])
             if readSpreadsheet(spreadsheet_url['url'], cres_loc=cre_loc,alias=spreadsheet_url['alias']):
                 add_to_github(cre_loc, spreadsheet_url['alias'],os.getenv("GITHUB_API_KEY"))
             else:
-                logger.error("Spreadsheet \"%s\" didn't produce any changes, no pull request needed"%spreadsheet_url['alias'])
+                logger.info("Spreadsheet \"%s\" didn't produce any changes, no pull request needed"%spreadsheet_url['alias'])
 
 if __name__ == "__main__":
     main()
