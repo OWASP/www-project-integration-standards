@@ -116,8 +116,6 @@ Last, there is an abundance of libraries and frameworks implementing secure defa
 
 On the database side, there are [ORM](https://sequelize.org/) libraries and [Query Builders](https://github.com/kayak/pypika) for most languages.
 
-If you write in Java, the [ESAPI project](https://www.javadoc.io/doc/org.owasp.esapi/esapi/latest/index.html) offers several methods to securely implement features, ranging from Cryptography to input escaping and output encoding.
-
 **Example Low Maturity Scenario:**
 
 The team attempted to build the requested features using vanilla NodeJS, connectivity to backend systems is validated by firing an internal request to `/healthcheck?remoteHost=<xx.xx.xx>` which attempts to run a ping command against the IP specified. All secrets are hard coded. The team uses off the shelf GraphQL libraries but versions are not checked using [NPM Audit](https://docs.npmjs.com/cli/audit). Development is performed by pushing to master which triggers a webhook that uses FTP to copy latest master to the development server which will become production once development is finished.
