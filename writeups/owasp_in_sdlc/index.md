@@ -166,7 +166,7 @@ The application features received Dynamic Automated testing when each reached st
 
 Hopefully by this stage, features are adequately designed, written, and tested. This stage involves configuration, resilience and observability. Here, the Mod Security [Core Rule Set](https://github.com/OWASP/www-project-modsecurity-core-rule-set) can be used to effectively detect and block several attacks against the platform.
 
-Moreover, secure configuration standards can be tested for using the [Open Policy Agent](https://www.openpolicyagent.org/).
+Moreover, secure configuration standards can be enforced during the deployment using the [Open Policy Agent](https://www.openpolicyagent.org/).
 
 Last projects such as the [ELK stack](https://www.elastic.co/elastic-stack), [Grafana](https://grafana.com/) and [Prometheus](https://prometheus.io/docs/introduction/overview/) can be used to aggregate logging and provide observability.
 
