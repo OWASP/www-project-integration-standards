@@ -7,7 +7,7 @@
 * <i class="fas fa-hammer" style="font-size: 1.2em; color:#233e81;"></i><span style="font-size:1.0em;padding-left:12px;">Breaker</span>
 
 ### GitHub
-* [Contribute Here](https://github.com/northdpole/www-project-integration-standards/tree/master/scripts/lambda)
+* [Contribute Here](https://github.com/OWASP/www-project-integration-standards)
 
 ### Slack
 
