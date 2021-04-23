@@ -55,7 +55,7 @@ There is some great advice on threat modeling out there *e.g.* [this](https://ar
 
 A bite sized primer by Adam Shostack himself can be found [here](https://adam.shostack.org/blog/2018/03/threat-modeling-panel-at-appsec-cali-2018/).
 
-OWASP includes a short [article](https://wiki.owasp.org/index.php/Category:Threat_Modeling) on Threat Modeling along with a relevant [Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html). Moreover, if you're following OWASP SAMM, it has a short section on [Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/).
+OWASP includes some short articles [1](https://owasp.org/www-community/Threat_Modeling), [2](https://owasp.org/www-community/Application_Threat_Modeling), on Threat Modeling along with a relevant [Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html). Moreover, if you're following OWASP SAMM, it has a short section on [Threat Assessment](https://owaspsamm.org/model/design/threat-assessment/).
 
 There's a few projects that can help with creating Threat Models at this stage, [PyTM](https://github.com/izar/pytm) is one, [ThreatSpec](https://github.com/threatspec/threatspec) is another.
 
@@ -106,7 +106,7 @@ SAMM at this stage offers the following [generic implementation considerations](
 
 At any maturity level, linters can be introduced to ensure that consistent code is being added. For most linters, there are IDE integrations providing software engineers with the ability to validate code correctness during development time. Several linters also include security specific rules. This allows for basic security checks before the code is even committed. For example, if you write in Typescript, you can use [tslint](https://github.com/palantir/tslint) along with [tslint-config-security](https://www.npmjs.com/package/tslint-config-security) to easily and quickly perform basic checks.
 
-However, linters cannot detect vulnerabilities in third party libraries, and as software supply chain attacks spread, this consideration becomes more important. To track third party library usage and audit their security you can use [Dependency Check/Track](https://dependencytrack.org/).
+However, linters cannot detect vulnerabilities in third party libraries, and as software supply chain attacks spread, this consideration becomes more important. To track third party library usage and audit their security you can use [Dependency Check](https://jeremylong.github.io/DependencyCheck/) and [Dependency Track](https://dependencytrack.org/).
 
 To tackle the security of code developed in-house, OWASP offers an extensive collection of [Cheatsheets](https://cheatsheetseries.owasp.org/) demonstrating how to implement features securely. Moreover, the Security Knowledge Framework[1] offers an extensive library of code patterns spanning several programming languages. These patterns can be used to not only jumpstart the development process, but also do so securely.
 
@@ -198,9 +198,9 @@ The Open Source community at this stage comes to the rescue with a number of hig
 
 Concerning metrics, the community has been quite vocal on what to measure and how important it is. The OWASP CISO guide offers 3 broad categories of SDLC metrics[1] which can be used to measure effectiveness of security practices. Moreover, there is a number of presentations on what could be leveraged to improve a security programme, starting from Marcus' Ranum's [keynote](https://www.youtube.com/watch?v=yW7kSVwucSk) at Appsec California[1], Caroline Wong's similar [presentation](https://www.youtube.com/watch?v=dY8IuQ8rUd4) and [this presentation](https://www.youtube.com/watch?v=-XI2DL2Uulo) by J. Rose and R. Sulatycki. These among several writeups by private companies all offering their own version of what could be measured.
 
-However, metrics won't necessarily improve without training engineering teams and somehow building a security-minded culture. Security training is a long and complicated discussion. There is a variety of approaches out there, on the testing-only end of the spectrum there is fully black box virtual machines such as [DVWA](http://www.dvwa.co.uk/), [Metasploitable series](https://metasploit.help.rapid7.com/docs/metasploitable-2) and the [VulnHub](https://www.vulnhub.com/) project.
+However, metrics won't necessarily improve without training engineering teams and somehow building a security-minded culture. Security training is a long and complicated discussion. There is a variety of approaches out there, on the testing-only end of the spectrum there is fully black box virtual machines such as [DVWA](https://dvwa.co.uk/), [Metasploitable series](https://metasploit.help.rapid7.com/docs/metasploitable-2) and the [VulnHub](https://www.vulnhub.com/) project.
 
-The code & remediation end of the spectrum isn't as well-developed, mainly due to the complexity involved in building and distributing such material. However, there are some respectable solutions, [Remediate The Flag](https://www.remediatetheflag.com/) can be used to setup a code based challenge.
+The code & remediation end of the spectrum isn't as well-developed, mainly due to the complexity involved in building and distributing such material. However, there are some respectable solutions, [Secure Flag](https://secureflag.com/) can be used to setup a code based challenge.
 
 ![Remediate the Flag](images/rtf.png "Remediate the Flag")
 
