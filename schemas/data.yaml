@@ -1,0 +1,28 @@
+CREs:
+  - CRE: "<ID in here>" # ID could be a number, or a keyword. If it's a keyword, an ID will be set in the metadata.
+    metadata:
+      description: "string"
+      tags:
+    links:
+      requirements:
+        ASVS:
+        - ID: "<ASVS_ID>"
+          URI: "<URI for that ID -- OPTIONAL>"
+        - ID: "<ASVS_ID>"
+          URI: "<URI for that ID -- OPTIONAL>"
+        MASVS:
+      tests:
+        WSTG:
+        MSTG:
+  - CRE: "<ID in here>"
+    links:
+      requirements:
+        ASVS:
+        - ID: "<ASVS_ID>"
+          URI: "<URI for that ID -- OPTIONAL>"
+        - ID: "<ASVS_ID>"
+          URI: "<URI for that ID -- OPTIONAL>"
+        MASVS:
+      tests:
+        WSTG:
+        MSTG:
