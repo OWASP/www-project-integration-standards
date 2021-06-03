@@ -20,8 +20,13 @@ Another deliverable is a **standardisation** on how security initiatives can be 
 The below is a rough estimation as it is dependent on other projects' time and availability.
 
 - End of Q1 2020: Design phase; the project has a clear vision on its deliverables, with proper feedback on its way forward.
+  - ✔ Project repository was set with the clear intentions of the project
 - Start of Q2 2020: Plan the setup of the project and start tackling it, by first identifying the feeding projects and the links to be done between frameworks.
+  - ✔ A list of OWASP projects and standards that are external to OWASP were chosen to launch the first iteration of the project.
 - End of Q3 2020: MVP release where a proper requirements set has been established and released for testing to be conducted on the standard being proposed.
+  - ❌ This was pushed back due to several hardships, find below its new expectations.
+  - ✔ WayFinder diagram was created and published.
+  - ✔ OWASP in the SDLC article was written, reviewed, and published.
 
 The roadmap will be adjusted as the project moves forward.
 
