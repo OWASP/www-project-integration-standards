@@ -27,6 +27,8 @@ The below is a rough estimation as it is dependent on other projects' time and a
   - ❌ This was pushed back due to several hardships, find below its new expectations.
   - ✔ WayFinder diagram was created and published.
   - ✔ OWASP in the SDLC article was written, reviewed, and published.
+- End of Q2 2021: Release of the backend APIs that will provide consumers with the requirements mapping based on pre-written sheets by the team.
+- End of Q3 2021: Release of the frontend MVP to help the community and consumers better visualize the requirements maps.
 
 The roadmap will be adjusted as the project moves forward.
 
