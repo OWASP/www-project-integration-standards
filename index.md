@@ -15,7 +15,7 @@ Four deliverables are specified:
 
 - A study of **OWASP in the SDLC**
 - The **Security wayfinder** (see below): an overview of OWASP projects and how they are related
-- The **Common Requirement Enumeration** or CRE: a mechanism to link between the content of standards and guidelines on multiple levels of topics, bringing together requirements, testing strategies, countermeasures, and links to existing repositories of threats and weaknesses. Currently (Aug 2021) CRE is in Alpha and will be released in Beta soon.
+- The **Common Requirement Enumeration** or CRE: a mechanism to link between the content of standards and guidelines on multiple levels of topics, bringing together requirements, testing strategies, countermeasures, and links to existing repositories of threats and weaknesses. The CRE has been released in beta at <a href="https://www.opencre.org">opencre.org</a>.
 - An **SDLC tool exchange standard** on how security initiatives can be integrated by exchanging data regarding different elements of the software development lifecycle (instructions, requirements, tests, test results, threats, findings).
 
 ## Project roadmap
