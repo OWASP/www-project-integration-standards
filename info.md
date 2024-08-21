@@ -7,9 +7,10 @@
 
 ### GitHub
 * [Contribute Here](https://github.com/OWASP/www-project-integration-standards)
+* [Separate repo for OpenCRE](https://github.com/OWASP/common-requirement-enumeration repository)
 
 ### Slack
-* [Join OWASP Slack](https://owasp-slack.herokuapp.com/)
+* [Join OWASP Slack](https://owasp.org/slack/invite)
 * [Join our channel](https://owasp.slack.com/archives/CPMEWT342)
 
 ### Licensing
