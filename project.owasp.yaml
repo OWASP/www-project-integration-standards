@@ -1,0 +1,40 @@
+audience:
+  - breaker
+  - builder
+  - defender
+community:
+  - name: project-integration
+    platform: slack
+    url: https://owasp.slack.com/archives/CPMEWT342
+    description: Channel for discussing how OWASP projects can work together
+  - name: project-cre
+    platform: slack
+    url: https://owasp.slack.com/archives/C02EAS3MY84
+    description: "Channel for the Open Common Requirements Enumeration project\n<http://OpenCRE.org|OpenCRE.org>\nA deliverable of <https://owasp.org/www-project-integration-standards/>"
+leaders:
+  - name: Rob van der Veer
+    github: robvanderveer
+  - name: Spyros Gasteratos
+    github: northdpole
+level: 3
+license:
+  - CC0-1.0
+name: OWASP Integration Standards
+pitch: Standards to integrate between standardisation projects to properly handle content linking between documents and data exchange between tools
+repositories:
+  - name: www-project-integration-standards
+    url: https://github.com/OWASP/www-project-integration-standards
+    description: OWASP Foundation Web Repository
+  - name: OpenCRE
+    url: https://github.com/OWASP/OpenCRE
+tags:
+  - SDLC
+  - standards
+  - integration
+  - appsec
+  - application-security
+  - attackers
+  - builders
+  - defenders
+type: documentation
+website: https://owasp.org/www-project-integration-standards
